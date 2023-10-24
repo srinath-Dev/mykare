@@ -16,8 +16,10 @@ function App() {
   return (
     <Provider store={store}>
       <NavigationContainer>
-        <Stack.Navigator initialRouteName={NavigatorNames.registration}>
-          <Stack.Screen name={NavigatorNames.registration} component={Registration} />
+        <Stack.Navigator initialRouteName={NavigatorNames.registration } screenOptions={{
+          headerShown: false,
+        }}>
+          <Stack.Screen name={NavigatorNames.registration} component={Registration}  />
           <Stack.Screen name={NavigatorNames.login} component={Login} />
           <Stack.Screen name={NavigatorNames.dashboard} component={Dashboard} />
         </Stack.Navigator>

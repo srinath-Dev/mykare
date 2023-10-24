@@ -30,23 +30,20 @@ export const { registerUser, loginUser, logoutUser, setError } = userSlice.actio
 
 export const registerUserAsync = (user) => async (dispatch) => {
   try {
+    const existingUsers = JSON.parse(await AsyncStorage.getItem("users")) || [];
+    existingUsers.push(user);
+    // Add the new user to the existing users array.
     await AsyncStorage.setItem(user.username, JSON.stringify(user));
+    await AsyncStorage.setItem("users", JSON.stringify(existingUsers));
     dispatch(registerUser(user));
   } catch (error) {
     dispatch(setError(error.message));
   }
 };
 
-export const loginUserAsync = (username, password) => async (dispatch) => {
+export const loginUserAsync = (user) => async (dispatch) => {
   try {
-    const userData = await AsyncStorage.getItem(username);
-    const user = JSON.parse(userData);
-
-    if (user && user.password === password) {
-      dispatch(loginUser(user));
-    } else {
-      dispatch(setError('Incorrect username or password'));
-    }
+    dispatch(loginUser(user));
   } catch (error) {
     dispatch(setError(error.message));
   }

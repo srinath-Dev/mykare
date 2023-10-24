@@ -3,7 +3,7 @@ import { useState } from "react";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import NavigatorNames from "../utils/NavigatorNames";
 import { useDispatch, useSelector } from "react-redux";
-import { setError } from "../store/slices/userSlice";
+import { registerUserAsync, setError } from "../store/slices/userSlice";
 
 const Registration = ({ navigation }) => {
 
@@ -26,22 +26,22 @@ const Registration = ({ navigation }) => {
           return;
         }
 
-        // Add the new user to the existing users array.
-        existingUsers.push({ fullName, username, password, mobileNumber });
-        await AsyncStorage.setItem("users", JSON.stringify(existingUsers));
-        navigation.navigate(NavigatorNames.login);
+        dispatch(registerUserAsync({ fullName, username, password, mobileNumber })).then(() => {
+          navigation.navigate(NavigatorNames.login);
+        });
+
       } catch (error) {
         console.error(error);
       }
     } else {
-      dispatch(setError('Please fill in all fields.'));
+      dispatch(setError("Please fill in all fields."));
       alert("Please fill in all fields.");
     }
   };
 
   const handleLoginNav = async () => {
-    navigation.navigate(NavigatorNames.login)
-  }
+    navigation.navigate(NavigatorNames.login);
+  };
 
   return (
     <SafeAreaView>

@@ -1,9 +1,17 @@
 import { Button, SafeAreaView, Text } from "react-native";
 import NavigatorNames from "../utils/NavigatorNames";
+import { useDispatch, useSelector } from "react-redux";
+import { logoutUser } from "../store/slices/userSlice";
 
 const Dashboard = ({ route, navigation }) => {
 
-  const { user } = route.params;
+  const user = useSelector((state) => state.user.user);
+  const dispatch = useDispatch();
+
+  const handleLogout = () => {
+    dispatch(logoutUser());
+    navigation.navigate('Login');
+  };
 
   return(
     <SafeAreaView>
