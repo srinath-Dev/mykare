@@ -1,6 +1,19 @@
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
-![Screenshot 1](https://github.com/srinath-Dev/mykare/assets/58159799/0793e065-77a9-478b-9770-1282f8def213)
+<table>
+  <tr>
+    <td>Welcome Screen</td>
+     <td>Register Screen</td>
+     <td>Login Screen</td>
+  </tr>
+  <tr>
+<td><img src="https://github.com/srinath-Dev/mykare/assets/58159799/0793e065-77a9-478b-9770-1282f8def213" width="200" /> </td>
+<td><img src="https://github.com/srinath-Dev/CodingmartTestbysrinath/blob/master/Screenshot_1613318691.png" width="200" /></td>
+<td><img src="https://github.com/srinath-Dev/CodingmartTestbysrinath/blob/master/Screenshot_1613318698.png" width="200" /></td>
+
+ </tr>
+ 
+ </table>
 
 
 # Getting Started
