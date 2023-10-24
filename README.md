@@ -1,15 +1,15 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+This is a Mykare  [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
 <table>
   <tr>
-    <td>Welcome Screen</td>
-     <td>Register Screen</td>
+    <td>Register Screen</td>
      <td>Login Screen</td>
+     <td>Dashboard Screen</td>
   </tr>
   <tr>
 <td><img src="https://github.com/srinath-Dev/mykare/assets/58159799/0793e065-77a9-478b-9770-1282f8def213" width="200" /> </td>
-<td><img src="https://github.com/srinath-Dev/CodingmartTestbysrinath/blob/master/Screenshot_1613318691.png" width="200" /></td>
-<td><img src="https://github.com/srinath-Dev/CodingmartTestbysrinath/blob/master/Screenshot_1613318698.png" width="200" /></td>
+<td><img src="https://github.com/srinath-Dev/mykare/assets/58159799/bf65d202-43e3-41d6-b65a-ce08d9d14bc7" width="200" /></td>
+<td><img src="https://github.com/srinath-Dev/mykare/assets/58159799/f6598c8a-dc41-4470-a0f0-79e3bd9418d9" width="200" /></td>
 
  </tr>
  
