@@ -1,9 +1,10 @@
-import { Button, SafeAreaView, Text, TextInput } from "react-native";
+import { SafeAreaView, Text, TextInput, View, Image, TouchableOpacity } from "react-native";
 import { useState } from "react";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import NavigatorNames from "../utils/NavigatorNames";
 import { useDispatch, useSelector } from "react-redux";
 import { registerUserAsync, setError } from "../store/slices/userSlice";
+import { themeColors } from "../theme";
 
 const Registration = ({ navigation }) => {
 
@@ -44,36 +45,75 @@ const Registration = ({ navigation }) => {
   };
 
   return (
-    <SafeAreaView>
+    <View className="flex-1 bg-white" style={{ backgroundColor: themeColors.bg }}>
+      <SafeAreaView className="flex">
 
-      <Text>Registration</Text>
-      <TextInput
-        placeholder="Full Name"
-        value={fullName}
-        onChangeText={setFullName}
-      />
-      <TextInput
-        placeholder="Username"
-        value={username}
-        onChangeText={setUsername}
-      />
-      <TextInput
-        placeholder="Password"
-        secureTextEntry={true}
-        value={password}
-        onChangeText={setPassword}
-      />
+        <View className="flex-row justify-center mt-8">
+          <Image source={require("../../assets/images/mykarelogo.png")}
+                 style={{ width: 180, height: 50 }}
+                 resizeMode="contain"
+          />
+        </View>
+      </SafeAreaView>
 
-      <TextInput
-        placeholder="Mobile Number"
-        value={mobileNumber}
-        onChangeText={setMobileNumber}
-      />
-      <Button title="Register" onPress={handleRegistration} />
+      <View className="flex-1 bg-white px-8 pt-8 mt-8"
+            style={{ borderTopLeftRadius: 50, borderTopRightRadius: 50 }}
+      >
 
-      <Button title="Login Here" onPress={handleLoginNav} />
+        <View className="form space-y-2">
+          <Text className="text-gray-700 ml-4">Full Name</Text>
+          <TextInput
+            className="p-4 bg-gray-100 text-gray-700 rounded-2xl mb-3"
+            placeholder="Enter Name"
+            value={fullName}
+            onChangeText={setFullName}
+          />
+          <Text className="text-gray-700 ml-4">Mobile Number</Text>
+          <TextInput
+            className="p-4 bg-gray-100 text-gray-700 rounded-2xl mb-3"
+            value={mobileNumber}
+            onChangeText={setMobileNumber}
+            placeholder="Enter Mobile Number"
+          />
+          <Text className="text-gray-700 ml-4">UserName</Text>
+          <TextInput
+            className="p-4 bg-gray-100 text-gray-700 rounded-2xl mb-3"
+            value={username}
+            onChangeText={setUsername}
+            autoCapitalize='none'
+            placeholder="Enter UserName"
+          />
+          <Text className="text-gray-700 ml-4">Password</Text>
+          <TextInput
+            className="p-4 bg-gray-100 text-gray-700 rounded-2xl mb-7"
 
-    </SafeAreaView>
+            secureTextEntry={true}
+            value={password}
+            onChangeText={setPassword}
+            placeholder="Enter Password"
+          />
+
+        </View>
+
+        <TouchableOpacity
+          className="py-5 bg-secondary rounded-xl"
+          onPress={handleRegistration}
+        >
+          <Text className="font-xl font-bold text-center text-gray-700">
+            Register
+          </Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={handleLoginNav} className="flex-row justify-center mt-7">
+          <Text className="text-gray-500 font-semibold">Already have an account?</Text>
+          <View>
+            <Text className="font-semibold text-yellow-500"> Login</Text>
+          </View>
+        </TouchableOpacity>
+
+      </View>
+
+
+    </View>
   );
 
 };

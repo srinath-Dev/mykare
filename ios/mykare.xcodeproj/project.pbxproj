@@ -11,6 +11,7 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		3C77E3956EBA4C71B326B9E5 /* mykarelogo.png in Resources */ = {isa = PBXBuildFile; fileRef = BACB25C443F54CF4B023440F /* mykarelogo.png */; };
 		5703B24097235DB8E10004C1 /* libPods-mykare.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B077C09EE15D3DF458F203D /* libPods-mykare.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		93102A812EA77062A6AC6604 /* libPods-mykare-mykareTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 273B4BFDA6C4825E1DB12186 /* libPods-mykare-mykareTests.a */; };
@@ -42,6 +43,7 @@
 		7C72F5C4EBF37D6E310D7B91 /* Pods-mykare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mykare.release.xcconfig"; path = "Target Support Files/Pods-mykare/Pods-mykare.release.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = mykare/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		83488B3C77C0FC19C65ECE8B /* Pods-mykare-mykareTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mykare-mykareTests.debug.xcconfig"; path = "Target Support Files/Pods-mykare-mykareTests/Pods-mykare-mykareTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BACB25C443F54CF4B023440F /* mykarelogo.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = mykarelogo.png; path = ../assets/images/mykarelogo.png; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		FBC07F536D510C33F486E9AF /* Pods-mykare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mykare.debug.xcconfig"; path = "Target Support Files/Pods-mykare/Pods-mykare.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -106,6 +108,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		78EF8F04CB5C483398DA3A02 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BACB25C443F54CF4B023440F /* mykarelogo.png */,
+			);
+			name = Resources;
+			path = "";
+			sourceTree = "<group>";
+		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +133,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				78EF8F04CB5C483398DA3A02 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -244,6 +256,7 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				3C77E3956EBA4C71B326B9E5 /* mykarelogo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
